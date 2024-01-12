@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () => {
-   connectDB(process.env.DATABASE_URL).then(con => {
+   connectDB().then(con => {
     console.log(`Example app listening on port ${port}`);
    }).catch(err => {
     console.log(err)
